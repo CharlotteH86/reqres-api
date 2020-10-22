@@ -26,7 +26,6 @@ formEl.addEventListener("submit", (e) => {
       } else {
         showUsersButtonEl.classList.remove("hide");
       }
-      console.log(jsonData);
     });
 });
 
@@ -55,9 +54,6 @@ usersListEl.addEventListener("click", (e) => {
     .then((res) => res.json())
     .then((jsonData) => {
       const user = jsonData.data;
-
-      console.log(jsonData);
-      console.log(jsonData.data);
 
       const name = document.createElement("p");
       userInfoContainer.innerHTML = "";
